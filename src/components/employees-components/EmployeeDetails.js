@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Employee.css';
+import useDocumentTitle from '../../custom-hooks/useDocumentTitle';
 
 export function EmployeeDetails({ match }) {
     // useEffect runs when component mounts
@@ -8,8 +9,12 @@ export function EmployeeDetails({ match }) {
         employeeDetails(empId);
     }, [empId])
 
+    // Seting document title
+    const [title, setTitle] = useState('Employee');
+    useDocumentTitle(title)
+    
     // Setting state of the application
-    const [empDetails, setemployeesDetails] = useState({});
+    const [empDetails, setEmployeesDetails] = useState({});
 
     // API operation
     const employeeDetails = async (employeeId) => {
@@ -17,8 +22,8 @@ export function EmployeeDetails({ match }) {
             `https://reqres.in/api/users/${employeeId}`
         )
         const employeeDetails = await data.json();
-        setemployeesDetails(employeeDetails.data);
-        console.log(employeeDetails.data);
+        setEmployeesDetails(employeeDetails.data);
+        setTitle(employeeDetails.data.first_name)
     }
 
     // Click Handler
