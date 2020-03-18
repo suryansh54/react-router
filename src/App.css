@@ -1,0 +1,15 @@
+.custom-header-wrapper {
+  background: #313131;
+  padding: 10px;
+}
+
+.custom-header-wrapper ul {
+  margin: 0;
+  list-style: none;
+}
+
+.custom-header-wrapper ul li {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+}
