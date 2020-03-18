@@ -1,0 +1,36 @@
+.employee-details {
+  background: #f7f7f7;
+}
+
+.employee-details .picture {
+  float: left;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+}
+
+.employee-details .picture img {
+  display: block;
+}
+
+.basic-info {
+    float: left;
+    padding: 10px;
+    width: calc(100% - 128px);
+}
+
+.basic-info .name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.basic-info .email {
+  margin: 0;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+.basic-info .action-wrapper {
+  float: right;
+  padding: 10px;
+}

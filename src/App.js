@@ -10,7 +10,7 @@ import { Navigation } from './components/Navigation';
 
 // Employee Components
 import { Employees } from './components/employees-components/Employees';
-import { EmployeesDetails } from './components/employees-components/EmployeesDetails';
+import { EmployeeDetails } from './components/employees-components/EmployeeDetails';
 
 // Router component
 import { BrowserRouter as Router, /*Switch,*/ Route } from 'react-router-dom';
@@ -27,7 +27,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/employees" component={Employees} />
-          <Route path="/employee/:id" component={EmployeesDetails} />
+          <Route path="/employee/:id" component={EmployeeDetails} />
         </div>
       </div>
     </Router>
